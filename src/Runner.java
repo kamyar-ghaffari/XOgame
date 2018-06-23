@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Runner {
     private static Scanner input = new Scanner(System.in);
+    private static Scanner again = new Scanner(System.in);
+    private static Scanner name = new Scanner(System.in);
 
     public static String getPlayerxName() {
         return playerX.getName();
@@ -19,9 +21,9 @@ public class Runner {
         playerX = null;
         playerO = null;
         System.out.println("Player X , please enter your name:");
-        String player_1_name = input.nextLine();
+        String player_1_name = name.nextLine();
         System.out.println("player O , please enter your name:");
-        String player_2_name = input.nextLine();
+        String player_2_name = name.nextLine();
         playerX = new Player(player_1_name, "X");
         playerO = new Player(player_2_name, "O");
 
@@ -44,12 +46,12 @@ public class Runner {
     }
     static void reRun(){
         System.out.println("wanna play again? (y/n)");
-        String answer = input.nextLine();
+        String answer = again.nextLine();
         if (answer.equals("y") || answer.equals("Y")) {
             run();
         } else if (answer.equals("n") || answer.equals("N")) {
             System.exit(0);
-        } else {
+        } else if (!answer.equals("n") || !answer.equals("N") || !answer.equals("y") || !answer.equals("Y")){
             reRun();
         }
     }
