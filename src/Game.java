@@ -19,7 +19,7 @@ public class Game {
             || board[0][0].equals(X) && board[1][1].equals(X) && board[2][2].equals(X)
             || board[0][2].equals(X) && board[1][1].equals(X) && board[2][0].equals(X)) {
             setStatus("X WON");
-            System.out.println(Runner.getPlayer_x_name() + " WON !!");
+            System.out.println(Runner.getPlayerxName() + " WON !!");
             Runner.reRun();
         } else if (board[0][0].equals(O) && board[0][1].equals(O) && board[0][2].equals(O)
                 || board[1][0].equals(O) && board[1][1].equals(O) && board[1][2].equals(O)
@@ -30,7 +30,7 @@ public class Game {
                 || board[0][0].equals(O) && board[1][1].equals(O) && board[2][2].equals(O)
                 || board[0][2].equals(O) && board[1][1].equals(O) && board[2][0].equals(O)) {
             setStatus("O WON");
-            System.out.println(Runner.getPlayer_o_name() + " WON !!");
+            System.out.println(Runner.getPlayeroName() + " WON !!");
             Runner.reRun();
         } else if (!board[0][0].equals(empty) && !board[0][1].equals(empty) && !board[0][2].equals(empty)
                 && !board[1][0].equals(empty) && !board[1][1].equals(empty) && !board[1][2].equals(empty)
